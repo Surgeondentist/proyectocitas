@@ -1,5 +1,7 @@
 <?php
 
+require_once "./Clases/aplicacion.php";
+/*
 $controlador =  isset($_GET['controlador']) ? $_GET['controlador'] : 'inicio';
 
 if ($controlador === 'inicio') {
@@ -10,5 +12,10 @@ if ($controlador === 'inicio') {
     echo "controlador invalido";
 }
 
-#echo "Punto de entrada ";
+#echo "Punto de entrada "; */
+
+$aplicacion = new Aplicacion(__DIR__);
+$aplicacion->correrApp();
+
+
 
