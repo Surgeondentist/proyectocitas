@@ -20,12 +20,26 @@ class Aplicacion{
       if (!realpath($dirControlador)) {
         throw new Exception("No existe el archivo {$dirControlador}");
       }
+      #importamos
+      require_once $dirControlador;
+      #validamos existencia de una clase controlador
+      if (!class_exists($nombreRealControlador)) {
+        throw new Exception("No existe el controlador {$nombreRealControlador}");
+      }
+
+      $this->controlador = new $nombreRealControlador();
+
     }
 
     public function correrApp(){
          $this->nombreControlador = $_GET['controlador'] ?? 'inicio';
          $this->nombreAccion = $_GET['accion'] ?? 'inicio';
          $this->cargarControlador();
+         
+         if (!method_exists($this->controlador, $this->nombreAccion)) {
+            throw new Exception("No existe la accion {$this->nombreAccion}");
+         }
+         call_user_func_array([ $this->controlador, $this->nombreAccion], []);
     }
 
 
