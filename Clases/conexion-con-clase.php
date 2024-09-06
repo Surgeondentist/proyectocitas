@@ -28,9 +28,17 @@ $resultado = ConexionDB::get()->insertar("usuarios", $datos);
 var_dump($resultado);
 */
 
+
+/* 
 $idAEditar = 3;
 $datosAModificar = [
     'Nombre'=> 'usuarioNuevo',
     'email' => 'usuario@mod',
     'contrasena' => '4321',
 ];
+$resultado = ConexionDB::get()->actualizar("usuarios", $idAEditar, $datosAModificar);
+var_dump($resultado); */
+
+$idAEliminar = 3;
+$resultado = ConexionDB::get()->eliminar("usuarios", $idAEliminar);
+var_dump($resultado);

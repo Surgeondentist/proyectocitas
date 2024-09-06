@@ -62,9 +62,34 @@ class ConexionDB{
         $valores = array_values($datos);
         $tokens = implode(',', array_fill(0, count($datos), "?"));
         $sql = "INSERT INTO {$tabla} ({$columnas}) VALUES ({$tokens})";
-        $consultaAEjectuar = $this->conexion->prepare($sql);
-        $resultado = $consultaAEjectuar->execute($valores);
+        $consultaAEjecutar = $this->conexion->prepare($sql);
+        $resultado = $consultaAEjecutar->execute($valores);
         return $resultado;
     }
+
+
+public function actualizar($tabla, $id, $datos){
+
+$columnas = array_keys($datos);
+$colsActualizar = array_map(function ($nombreColumna) {
+ return "{$nombreColumna}=:{$nombreColumna}";
+
+}, $columnas );
+$sql = "UPDATE {$tabla} SET " . implode(',', $colsActualizar) . " WHERE id=:id"; 
+$consultaAEjecutar = $this->conexion->prepare($sql);
+
+$datos['id'] = $id;
+$resultado = $consultaAEjecutar->execute($datos);
+return $resultado;
+}
+
+public function eliminar($tabla, $id){
+
+    $sql = "DELETE FROM {$tabla} WHERE id=:id";
+    $consultaAEjecutar = $this->conexion->prepare($sql);
+    $resultado = $consultaAEjecutar->execute(['id'=> $id]);
+    return $resultado;
+
+}
 
 }
