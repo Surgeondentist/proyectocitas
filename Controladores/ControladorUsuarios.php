@@ -1,13 +1,13 @@
 <?php
 
-class ControladorUsuarios{
+class ControladorUsuarios extends ControladorBase {
 
     public function listado(){
-        echo "Pantalla de Listado";
+        $this->mostrarVista("usuarios","listado");
     }
 
     public function crear(){
-        echo "Pantalla de crear";
+        $this->mostrarVista("usuarios","crear");
     }
     public function actualizar(){
         echo "Pantalla de actualizar";

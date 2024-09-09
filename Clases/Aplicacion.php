@@ -21,13 +21,14 @@ class Aplicacion{
         throw new Exception("No existe el archivo {$dirControlador}");
       }
       #importamos
+      require_once "{$this->carpetaRaiz}/Controladores/ControladorBase.php";
       require_once $dirControlador;
       #validamos existencia de una clase controlador
       if (!class_exists($nombreRealControlador)) {
         throw new Exception("No existe el controlador {$nombreRealControlador}");
       }
 
-      $this->controlador = new $nombreRealControlador();
+      $this->controlador = new $nombreRealControlador($this);
 
     }
 
@@ -42,5 +43,9 @@ class Aplicacion{
          call_user_func_array([ $this->controlador, $this->nombreAccion], []);
     }
 
+
+    public function getCarpetaRaiz(){
+      return $this->carpetaRaiz;
+    }
 
 }

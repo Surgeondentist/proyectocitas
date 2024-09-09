@@ -1,9 +1,9 @@
 <?php
 
-class ControladorInicio{
+class ControladorInicio extends ControladorBase {
 
     public function inicio(){
-        echo "Pantalla de Inicio";
+        $this->mostrarVista("inicio", "dashboard");
     }
 
     public function login(){

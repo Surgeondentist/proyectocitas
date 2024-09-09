@@ -1,0 +1,2 @@
+<h1>dashboard</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi assumenda, tempora tenetur autem asperiores velit distinctio maiores dolores illum recusandae? Vel laudantium porro totam maxime omnis molestias nobis consequatur voluptatum.</p>

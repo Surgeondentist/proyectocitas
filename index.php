@@ -1,6 +1,6 @@
 <?php
 
-require_once "./Clases/aplicacion.php";
+require_once "./Clases/Aplicacion.php";
 /*
 $controlador =  isset($_GET['controlador']) ? $_GET['controlador'] : 'inicio';
 
