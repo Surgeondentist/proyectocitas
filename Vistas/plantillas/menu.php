@@ -34,7 +34,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./?controlador=usuarios&accion=listado">Listado de Usuarios</a></li>
-            <li><a class="dropdown-item" href="./?controaldor=usuarios&accion=crear">Crear Usuario</a></li>
+            <li><a class="dropdown-item" href="./?controlador=usuarios&accion=crear">Crear Usuario</a></li>
             <li><a class="dropdown-item" href="./?ontrolador=usuarios&accion=cambiar">Cambiar Usuario</a></li>
             <li><a class="dropdown-item" href="./?controlador=usuarios&accion=eliminar">Eliminar Usuario</a></li>
             <li><hr class="dropdown-divider"></li>
