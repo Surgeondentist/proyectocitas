@@ -11,12 +11,16 @@ abstract class ControladorBase{
         $dirVistas = $this->app->getCarpetaRaiz() . "/Vistas";
         $dirVistasAMostrar = "{$dirVistas}/{$modulo}/{$vista}.php";
         $dirPlantilla = "{$dirVistas}/plantillas/base.php";
-        $dirUtilidades = $this->app->getCarpetaRaiz() . "/Utilidades";
+
+        #Vamos a mover este import a la aplicacion
+        #$dirUtilidades = $this->app->getCarpetaRaiz() . "/Utilidades";
+
+
         #  Declara variables para las vistas
         foreach ($variables as $clave => $valor) {
             $$clave = $valor;
         }
-        include($dirUtilidades . "/funciones.php");
+        #include($dirUtilidades . "/funciones.php");
         ob_start();
         include $dirVistasAMostrar;
         $contenido = ob_get_clean();

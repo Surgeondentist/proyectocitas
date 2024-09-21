@@ -35,6 +35,32 @@ class ControladorUsuarios extends ControladorBase {
 
         $this->mostrarVista("usuarios","crear");
     }
+
+    public function editar(){
+        $idUsuario = $_GET['id'];
+
+        $sqlUsuario = "SELECT * FROM usuarios WHERE id='{$idUsuario}' ";
+        $resultado = ConexionDB::get()->query($sqlUsuario);
+        $usuario = $resultado[0]?? null;
+        if ($usuario === null) {
+            throw new Exception("Usuario con ID #{$idUsuario} no existe");
+            
+        }
+
+        if (isset($_POST['btn_actualizar'])) {
+            $usuarioActualizado = ConexionDB::get()
+            ->actualizar("usuarios", $idUsuario, [
+                'nombre' => $_POST['nombre'] ?? '',
+                'email' => $_POST['email']?? '',
+                'contrasena' => $_POST['contrasena']??''
+            ]);
+        }
+
+        $this->mostrarVista("usuarios", "editar", [
+            'usuario' => $usuario
+        ]);
+    }
+
     public function actualizar(){
         echo "Pantalla de actualizar";
     }

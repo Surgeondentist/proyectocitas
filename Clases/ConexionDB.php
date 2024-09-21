@@ -75,10 +75,10 @@ $colsActualizar = array_map(function ($nombreColumna) {
  return "{$nombreColumna}=:{$nombreColumna}";
 
 }, $columnas );
-$sql = "UPDATE {$tabla} SET " . implode(',', $colsActualizar) . " WHERE id=:id"; 
+$sql = "UPDATE {$tabla} SET " . implode(',', $colsActualizar) . " WHERE Id=:Id"; 
 $consultaAEjecutar = $this->conexion->prepare($sql);
 
-$datos['id'] = $id;
+$datos['Id'] = $id;
 $resultado = $consultaAEjecutar->execute($datos);
 return $resultado;
 }

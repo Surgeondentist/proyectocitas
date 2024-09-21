@@ -4,10 +4,6 @@
 <a  href="./?controlador=usuarios&accion=crear"    type="button" class="btn btn-primary">Crear Usuario</a>
 </div>
 <hr>
-<?=  crearLink("mi link", [
-  'controlador' => 'usuarios',
-  'accion' => 'crear'
-])?>
 <table class="table">
   <thead>
     <tr>
@@ -15,6 +11,7 @@
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
       <th scope="col">Contrasena</th>
+      <th scope="col">Opciones</th>
     </tr>
   </thead>
   <tbody>
@@ -26,6 +23,18 @@
       <td><?= $usuario['Nombre']?></td>
       <td><?= $usuario['email']?></td>
       <td><?= $usuario['contrasena']?></td>
+      <td>
+            <?=  crearLink("Editar", [
+            'controlador' => 'usuarios',
+            'accion' => 'editar',
+            'parametros' => [
+              'id' => $usuario['Id']
+            ],
+            'optionsHtml' => [
+              'class' => "btn btn-outline-info"
+            ]
+])?>
+      </td>
     </tr>
     <?php } ?>
   </tbody>

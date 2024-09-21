@@ -20,10 +20,14 @@ function convertirAParametros($array, $separador = "&", $encerrarCon = ""){
 function ruta($controlador, $accion, $parametros = []){
     # URL raiz
     $urlProyecto = "http://localhost/proyectolibreria/";
-    $parametros['controlador']= $controlador;
-    $parametros['accion'] = $accion;
+
+    #$parametros['controlador']= $controlador;
+    #$parametros['accion'] = $accion;
     #convertimos todo el array de parametros a String
-    $strParametros = convertirAParametros($parametros);
+    $strParametros = convertirAParametros(array_merge(
+        ['controlador'=> $controlador, 'accion' => $accion],
+        $parametros,
+    ));
     return "{$urlProyecto}?{$strParametros}";
 } 
 
@@ -31,6 +35,10 @@ function ruta($controlador, $accion, $parametros = []){
 function crearLink($texto, $configuracion = []){
     $controlador = $configuracion['controlador']?? 'inicio';
     $accion = $configuracion['accion'] ?? 'inicio';
-    $ruta = ruta($controlador, $accion);
-    return "<a href='$ruta'>{$texto}</a>";
+    $opcionesHtml = $configuracion['optionsHtml'] ?? [];
+    $parametros = $configuracion['parametros']??[];
+    $strOpcionesHtml = convertirAParametros($opcionesHtml, " ", '"');
+    $ruta = ruta($controlador, $accion, $parametros);
+
+    return "<a href='{$ruta}'{$strOpcionesHtml}>{$texto}</a>";
 }

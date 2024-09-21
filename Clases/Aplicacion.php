@@ -22,6 +22,7 @@ class Aplicacion{
       }
       #importamos
       require_once "{$this->carpetaRaiz}/Clases/ConexionDB.php";
+      require_once "{$this->carpetaRaiz}/Utilidades/funciones.php";
       require_once "{$this->carpetaRaiz}/Controladores/ControladorBase.php";
       require_once $dirControlador;
       #validamos existencia de una clase controlador
