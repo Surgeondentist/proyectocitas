@@ -20,8 +20,7 @@ class ControladorUsuarios extends ControladorBase {
                 'nombre' => $nombre,
                 'email' => $email,
                 'contrasena' => $contrasena
-            ]
-            );
+            ]);
             if ($usuarioGuardado) {
                 # Redireccionar a inicio
                 header('Location: http://localhost/proyectolibreria/?controlador=usuarios&accion=listado');

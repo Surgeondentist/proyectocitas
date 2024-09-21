@@ -20,7 +20,10 @@
     
 <div class="mb-3">
     <a class="btn btn-secondary" href="./?controlador=usuarios&accion=listado">Cancelar</a>
-    <button  class="btn btn-success"  type="submit"  name="btn_registrar">Guardar</button>
+    <button  
+    class="btn btn-success"  
+    type="submit"  
+    name="btn_registrar">Guardar</button>
 </div>
 
 </form>
