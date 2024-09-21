@@ -13,6 +13,12 @@ class Aplicacion{
 
         $this->carpetaRaiz= $carpetaRaiz;
     }
+
+    public function redireccionar($controlador, $accion, $parametros = []){
+      $url = ruta($controlador, $accion, $parametros);
+      header('Location:'. $url);
+                exit();
+    }
        
     public function cargarControlador(){
       $nombreRealControlador= "Controlador" . ucfirst($this->nombreControlador);

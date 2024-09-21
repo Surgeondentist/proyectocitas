@@ -1,7 +1,7 @@
 <?php
 
 abstract class ControladorBase{
-    private $app;
+    protected $app;
 
     public function __construct($app){
         $this->app = $app;

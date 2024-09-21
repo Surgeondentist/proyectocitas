@@ -31,7 +31,18 @@
               'id' => $usuario['Id']
             ],
             'optionsHtml' => [
-              'class' => "btn btn-outline-info"
+              'class' => "btn btn-outline-info btn-sm"
+            ]
+])?>
+
+<?=  crearLink("Eliminar", [
+            'controlador' => 'usuarios',
+            'accion' => 'Eliminar',
+            'parametros' => [
+              'id' => $usuario['Id']
+            ],
+            'optionsHtml' => [
+              'class' => "btn btn-outline-danger btn-sm"
             ]
 ])?>
       </td>
