@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Archivo: funciones.php
+ * Creado el: 23/09/2024
+ * Autor: Jhonatan Gamarra
+ * Descripción: Este archivo maneja funciones de uso general que hacen mas legible el codigo.
+ * Versión: 1.0
+ */
 
 /* Vamos a recibir un array y  lo vamos a convertir en un string de parametros
 ejemplo */
