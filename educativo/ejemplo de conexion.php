@@ -16,7 +16,7 @@ $conexionString = "mysql:host={$host};dbname={$database};charset=UTF8";
 
 #Siempre manejar excepciones de base de datos
 
-try {
+/*try {
     $conexion = new PDO($conexionString, $usuario, $contrasena);
     if (!$conexion) {
         echo "Error al conectarse a la base de datos";
@@ -33,4 +33,4 @@ try {
 } catch (PDOException $e) {
     #echo $e->getMessage();
     throw $e;
-}
+}*/

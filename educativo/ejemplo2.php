@@ -1,6 +1,6 @@
-<?php
+#<?php
 
-require_once "./ConexionDB.php";
+#require_once "./ConexionDB.php";
 
 #$db = new ConexionDB();
 #$db->conectar();
@@ -39,6 +39,6 @@ $datosAModificar = [
 $resultado = ConexionDB::get()->actualizar("usuarios", $idAEditar, $datosAModificar);
 var_dump($resultado); */
 
-$idAEliminar = 3;
-$resultado = ConexionDB::get()->eliminar("usuarios", $idAEliminar);
-var_dump($resultado);
+#$idAEliminar = 3;
+#$resultado = ConexionDB::get()->eliminar("usuarios", $idAEliminar);
+#var_dump($resultado);
