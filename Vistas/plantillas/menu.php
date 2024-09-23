@@ -18,13 +18,13 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Libros
+            Citas
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="./?controlador=libros&accion=listado">Listado de libros</a></li>
-            <li><a class="dropdown-item" href="./?controlador=libros&accion=crear">Crear Libro</a></li>
-            <li><a class="dropdown-item" href="./?controlador=libros&accion=cambiar">Cambiar libros</a></li>
-            <li><a class="dropdown-item" href="./?controlador=libros&accion=eliminar">Eliminar libros</a></li>
+            <li><a class="dropdown-item" href="./?controlador=citas&accion=listado">Listado de citas</a></li>
+            <li><a class="dropdown-item" href="./?controlador=citas&accion=crear">Crear Cita</a></li>
+            <li><a class="dropdown-item" href="./?controlador=citas&accion=cambiar">Cambiar Cita</a></li>
+            <li><a class="dropdown-item" href="./?controlador=citas&accion=eliminar">Eliminar Cita</a></li>
             <li><hr class="dropdown-divider"></li>
           </ul>
         </li>
