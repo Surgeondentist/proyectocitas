@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Archivo: ConexionDB.php
- * Creado el: 23/09/2024
- * Autor: Jhonatan Gamarra
- * Descripción: Este archivo maneja la Conexion a la base de datos a traves de PDO.
- * Versión: 1.0
- */
-
 class ConexionDB{
     private $host;
     private $usuario;

@@ -1,5 +1,5 @@
 
-<h1 class="text-light">Listado de Usuarios</h1>
+<h1>Listado de Usuarios</h1>
 <div>
 <a  href="./?controlador=usuarios&accion=crear"    type="button" class="btn btn-primary">Crear Usuario</a>
 </div>
@@ -10,7 +10,7 @@
       <th scope="col">Id</th>
       <th scope="col">Nombre</th>
       <th scope="col">Email</th>
-      <th scope="col">Direccion</th>
+      <th scope="col">Contrasena</th>
       <th scope="col">Opciones</th>
     </tr>
   </thead>
@@ -22,7 +22,7 @@
       <th scope="row"><?= $usuario['Id']?></th>
       <td><?= $usuario['Nombre']?></td>
       <td><?= $usuario['email']?></td>
-      <td><?= $usuario['direccion']?></td>
+      <td><?= $usuario['contrasena']?></td>
       <td>
             <?=  crearLink("Editar", [
             'controlador' => 'usuarios',

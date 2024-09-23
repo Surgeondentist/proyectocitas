@@ -1,11 +1,5 @@
 <?php
-/**
- * Archivo: ControladorUsuarios.php
- * Creado el: 23/09/2024
- * Autor: Jhonatan Gamarra
- * Descripción: Este archivo maneja la tabla usuarios a traves del CRUD recibiendo los datos con el metodo POST del boton del formulario correspondiente
- * Versión: 1.0
- */
+
 class ControladorUsuarios extends ControladorBase {
 
     public function listado(){
@@ -21,11 +15,11 @@ class ControladorUsuarios extends ControladorBase {
             echo "Formulario Enviado";
             $nombre = $_POST['Nombre'];
             $email = $_POST['email'];
-            $direccion = $_POST['direccion'];
+            $contrasena = $_POST['contrasena'];
             $usuarioGuardado = ConexionDB::get()->insertar("usuarios",[
                 'nombre' => $nombre,
                 'email' => $email,
-                'direccion' => $direccion
+                'contrasena' => $contrasena
             ]);
             if ($usuarioGuardado) {
                 # Redireccionar a inicio
@@ -59,7 +53,7 @@ class ControladorUsuarios extends ControladorBase {
             ->actualizar("usuarios", $idUsuario, [
                 'Nombre' => $_POST['Nombre'] ?? '',
                 'email' => $_POST['email']?? '',
-                'direccion' => $_POST['direccion']??''
+                'contrasena' => $_POST['contrasena']??''
             ]);
 
             if ($usuarioActualizado) {

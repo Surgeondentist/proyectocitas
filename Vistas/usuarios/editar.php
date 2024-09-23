@@ -3,18 +3,18 @@
 <form method="POST" action="<?= ruta("usuarios", "editar", ['id' => $usuario['Id']]) ?>">
 
 <div class="mb-3">
-    <label for="Nombre" class="form-label text-light">Nombre del Usuario</label>
+    <label for="Nombre" class="form-label">Nombre del Usuario</label>
     <input class="form-control" id="Nombre" name="Nombre" value="<?= $usuario['Nombre']?>">
 </div>
 
 <div class="mb-3">
-    <label for="email" class="form-label text-light" >E-mail del usuario</label>
+    <label for="email" class="form-label" >E-mail del usuario</label>
     <input class="form-control" id="email" name="email"  value="<?= $usuario['email'] ?>"/>
 </div>
 
 <div class="mb-3">
-    <label for="direccion" class="form-label text-light" >Direccion del Usuario</label>
-    <input class="form-control" id="direccion" name="direccion" value= "<?= $usuario['direccion'] ?>"/>
+    <label for="contrasena" class="form-label" >Contrasena para el usuario</label>
+    <input class="form-control" id="contrasena" name="contrasena" value= "<?= $usuario['contrasena'] ?>"/>
 </div>
     
 <div class="mb-3">

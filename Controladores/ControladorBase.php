@@ -1,13 +1,5 @@
 <?php
 
-/**
- * Archivo: ControladorBase.php
- * Creado el: 23/09/2024
- * Autor: Jhonatan Gamarra
- * Descripción: Este archivo maneja el controlador base a traves de la funcion mostrarVista
- * cargando las plantillas base para las diferentes vistas.
- * Versión: 1.0
- */
 abstract class ControladorBase{
     protected $app;
 
