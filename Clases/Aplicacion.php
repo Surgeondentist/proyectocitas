@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * Archivo: Aplicacion.php
+ * Creado el: 23/09/2024
+ * Autor: Jhonatan Gamarra
+ * Descripción: Este archivo maneja la aplicacion y controladores.
+ * Versión: 1.0
+ */
+
 class Aplicacion{
     
     private $nombreControlador;

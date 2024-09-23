@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * Archivo: ControladorCitas.php
+ * Creado el: 23/09/2024
+ * Autor: Jhonatan Gamarra
+ * Descripción: Este archivo maneja el controlador de la tabla de citas.
+ * utiliza las funciones listar(leer),crear,editar y eliminar recibiendo los datos a traves del metodo POST enviado por el boton del formulario correspondiente
+ * Versión: 1.0
+ */
+
 class ControladorCitas extends ControladorBase {
     
     public function listado(){

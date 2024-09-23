@@ -1,5 +1,11 @@
 <?php
-
+/**
+ * Archivo: ControladorUsuarios.php
+ * Creado el: 23/09/2024
+ * Autor: Jhonatan Gamarra
+ * Descripción: Este archivo maneja la tabla usuarios a traves del CRUD recibiendo los datos con el metodo POST del boton del formulario correspondiente
+ * Versión: 1.0
+ */
 class ControladorUsuarios extends ControladorBase {
 
     public function listado(){
