@@ -1,3 +1,6 @@
+
+
+
 <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
   <div class="container-fluid">
 <!-- Vinculos al Home -->
@@ -28,8 +31,7 @@
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="./?controlador=citas&accion=listado">Listado de citas</a></li>
             <li><a class="dropdown-item" href="./?controlador=citas&accion=crear">Crear Cita</a></li>
-            <li><a class="dropdown-item" href="./?controlador=citas&accion=cambiar">Cambiar Cita</a></li>
-            <li><a class="dropdown-item" href="./?controlador=citas&accion=eliminar">Eliminar Cita</a></li>
+
             <li><hr class="dropdown-divider"></li>
           </ul>
         </li>

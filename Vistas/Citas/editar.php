@@ -1,14 +1,14 @@
-<h1 class="text-light">Crear nueva Cita</h1>
+<h1>Editar Cita #<?= $citas['Id'] ?></h1>
 <hr>
-<form method="POST" action="./?controlador=citas&accion=crear">
+<form method="POST" action="<?= ruta("citas", "editar", ['id' => $citas['Id']]) ?>">
 
 <div class="mb-3">
-    <label for="fecha" class="form-label text-light">Fecha para la cita</label>
+    <label for="fecha" class="form-label">Fecha para la cita</label>
     <input type="date" class="form-control" id="fecha" name="fecha">
 </div>
 
 <div class="mb-3">
-    <label for="paciente" class="form-label text-light" >Id del paciente</label>
+    <label for="paciente" class="form-label" >Id del paciente</label>
     <input class="form-control" id="paciente" name="paciente"/>
 </div>
     
@@ -17,7 +17,7 @@
     <button  
     class="btn btn-success"  
     type="submit"  
-    name="btn_registrar">Guardar</button>
+    name="btn_actualizar">Actualizar</button>
 </div>
 
 </form>

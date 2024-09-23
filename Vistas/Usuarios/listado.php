@@ -1,5 +1,5 @@
 
-<h1>Listado de Usuarios</h1>
+<h1 class="text-light">Listado de Usuarios</h1>
 <div>
 <a  href="./?controlador=usuarios&accion=crear"    type="button" class="btn btn-primary">Crear Usuario</a>
 </div>

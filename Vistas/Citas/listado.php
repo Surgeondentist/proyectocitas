@@ -1,6 +1,5 @@
-<h1>Listado de Citas</h1>
-<p>Aqui se mostrara la lectura de los libros totales</p>
-<h1>Listado de Usuarios</h1>
+<h1 class="text-light">Listado de Citas</h1>
+<p class="text-light">Aqui encontraras las citas asignadas en nuestro sistema</p>
 <div>
 <a  href="./?controlador=citas&accion=crear"    type="button" class="btn btn-primary">Crear una cita</a>
 </div>
@@ -11,6 +10,7 @@
       <th scope="col">Id</th>
       <th scope="col">Fecha</th>
       <th scope="col">Paciente</th>
+      <th scope="col">Acciones</th>
     </tr>
   </thead>
   <tbody>
@@ -35,7 +35,7 @@
 
 <?=  crearLink("Eliminar", [
             'controlador' => 'citas',
-            'accion' => 'Eliminar',
+            'accion' => 'eliminar',
             'parametros' => [
               'id' => $citas['Id']
             ],

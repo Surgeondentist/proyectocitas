@@ -1,6 +1,6 @@
 
-<h1 class="header-title text-center">Bienvenidos a SaludMia</h1>
-<p class="text-center">Cuidamos de tu salud con nuestros servicios de calidad.</p>
+<h1 class="header-title text-center text-light" >Bienvenidos a SaludMia</h1>
+<p class="text-center text-light"  >Cuidamos de tu salud con nuestros servicios de calidad.</p>
 
 
 
