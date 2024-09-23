@@ -14,8 +14,8 @@
 </div>
 
 <div class="mb-3">
-    <label for="contrasena" class="form-label text-light" >Contrasena para el usuario</label>
-    <input class="form-control" id="contrasena" name="contrasena"/>
+    <label for="direccion" class="form-label text-light" >Direccion</label>
+    <input class="form-control" id="direccion" name="direccion"/>
 </div>
     
 <div class="mb-3">

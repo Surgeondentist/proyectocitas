@@ -15,11 +15,11 @@ class ControladorUsuarios extends ControladorBase {
             echo "Formulario Enviado";
             $nombre = $_POST['Nombre'];
             $email = $_POST['email'];
-            $contrasena = $_POST['contrasena'];
+            $direccion = $_POST['direccion'];
             $usuarioGuardado = ConexionDB::get()->insertar("usuarios",[
                 'nombre' => $nombre,
                 'email' => $email,
-                'contrasena' => $contrasena
+                'direccion' => $direccion
             ]);
             if ($usuarioGuardado) {
                 # Redireccionar a inicio
@@ -53,7 +53,7 @@ class ControladorUsuarios extends ControladorBase {
             ->actualizar("usuarios", $idUsuario, [
                 'Nombre' => $_POST['Nombre'] ?? '',
                 'email' => $_POST['email']?? '',
-                'contrasena' => $_POST['contrasena']??''
+                'direccion' => $_POST['direccion']??''
             ]);
 
             if ($usuarioActualizado) {

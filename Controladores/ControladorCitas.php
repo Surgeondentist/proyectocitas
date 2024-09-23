@@ -14,9 +14,11 @@ class ControladorCitas extends ControladorBase {
             echo "Formulario Enviado";
             $fecha = $_POST['fecha'];
             $paciente = $_POST['paciente'];
+            $servicio = $_POST['servicio'];
             $citaGuardado = ConexionDB::get()->insertar("citas",[
                 'fecha' => $fecha,
                 'paciente' => $paciente,
+                'servicio' => $servicio
 
             ]);
             if ($citaGuardado) {
@@ -52,6 +54,7 @@ class ControladorCitas extends ControladorBase {
             ->actualizar("citas", $idCitas, [
                 'fecha' => $_POST['fecha'] ?? '',
                 'paciente' => $_POST['paciente']?? '',
+                'servicio' => $_POST['servicio']?? ''
             ]);
 
             if ($citasActualizado) {

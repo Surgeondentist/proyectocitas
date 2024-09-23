@@ -11,6 +11,11 @@
     <label for="paciente" class="form-label text-light" >Id del paciente</label>
     <input class="form-control" id="paciente" name="paciente"/>
 </div>
+
+<div class="mb-3">
+    <label for="servicio" class="form-label text-light" >Servicio requerido</label>
+    <input class="form-control" id="servicio" name="servicio"/>
+</div>
     
 <div class="mb-3">
     <a class="btn btn-secondary" href="./?controlador=citas&accion=listado">Cancelar</a>

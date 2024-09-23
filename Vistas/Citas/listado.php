@@ -10,6 +10,7 @@
       <th scope="col">Id</th>
       <th scope="col">Fecha</th>
       <th scope="col">Paciente</th>
+      <th scope="col">Servicios</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -21,6 +22,7 @@
       <th scope="row"><?= $citas['Id']?></th>
       <td><?= $citas['fecha']?></td>
       <td><?= $citas['paciente']?></td>
+      <td><?= $citas['servicio']?></td>
       <td>
             <?=  crearLink("Editar", [
             'controlador' => 'citas',
